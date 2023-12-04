@@ -16,10 +16,11 @@ content.appendChild(main);
 content.appendChild(footerElt);
 
 const btns = document.querySelectorAll(".tab__btn");
-
+const checkbox = document.querySelector('input[type="checkbox"]');
 btns.forEach(function (btn) {
     btn.addEventListener("click", function (event) {
         handleTab(event.target.id);
+        checkbox.checked = false;
     });
 });
 

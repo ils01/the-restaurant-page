@@ -1,0 +1,38 @@
+@use "../utilities/" as *;
+
+.footer {
+    border-top: 1px solid $ash-gray;
+    background-color: $crow-black-light;
+    padding: 4rem 2rem 4rem;
+
+    display: flex;
+    justify-content: center;
+
+    .footer__container {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 4rem;
+        row-gap: 5rem;
+
+        & > .footer__list {
+            list-style-type: none;
+            padding: 0;
+
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+
+            .list-item {
+                color: $pearl-white-sub;
+            }
+            .list-title {
+                color: $pearl-white;
+                font-size: $fs-18;
+                font-weight: 600;
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+}

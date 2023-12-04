@@ -39,26 +39,29 @@ function navbar() {
 
     function refreshTime() {
         let dateString = new Date().toLocaleString("ru-Ru", {
-            timeZone: "Asia/Tokyo",
+            timeZone: "Europe/Moscow",
         });
 
         let time = dateString.split(", ")[1].split(":");
 
         statusTime.textContent = `${time[0]}:${time[1]}`;
 
-        if (time[0] >= 10 && time[0] <= 22) {
-            statusStatus.textContent = "We're open";
-        } else if (time[0] == 23) {
+        if (time[0] == 23) {
             statusStatus.textContent = "We're closing soon";
+        } else if (time[0] >= 10 && time[0] <= 23) {
+            statusStatus.textContent = "We're open";
         } else {
             statusStatus.textContent = "We're closed";
         }
+
+        navContainer.style.width = 16 + statusStatus.offsetWidth + "px";
     }
-    refreshTime();
-    setInterval(refreshTime, 1000);
 
     status.append(statusTime, statusStatus);
     rightSection.append(status);
+
+    setTimeout(refreshTime, 1);
+    setInterval(refreshTime, 1000);
 
     nav.append(navContainer, logo, rightSection);
 

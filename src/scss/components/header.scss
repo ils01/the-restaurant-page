@@ -1,9 +1,16 @@
 @use "../utilities/" as *;
 
+$t: 24px;
+
 header {
+    position: fixed;
+    width: 100%;
+    background-color: $crow-black-light;
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $ash-gray;
 }
 
 .navbar {
@@ -13,7 +20,7 @@ header {
     gap: 2rem;
 
     & > .logo {
-        margin-top: 1rem;
+        margin-top: $t;
         & > img {
             width: 32px;
             height: 32px;
@@ -21,7 +28,7 @@ header {
     }
 
     & > .header__right {
-        margin-top: 1rem;
+        margin-top: $t;
         margin-right: 1.25rem;
         display: flex;
         flex-direction: column;
@@ -32,7 +39,7 @@ header {
             width: max-content;
         }
         & > .status {
-            font-size: 0.9375rem;
+            font-size: $fs-14;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
@@ -48,7 +55,6 @@ header {
 
     $h: 33px;
     $w: 31px;
-    $t: 20px;
     $l: 20px;
 
     input[type="checkbox"] {
@@ -66,7 +72,7 @@ header {
         position: absolute;
         height: 23px;
         width: 37px;
-        top: $t;
+        top: $t + 5px;
         left: $l;
         z-index: 2;
 
