@@ -1,1 +1,30 @@
+@font-face {
+    font-family: "disco";
+    src: url("/src/static/fonts/disco70.otf") format("opentype");
+}
 
+@font-face {
+    font-family: "maccos";
+    src: url("/src/static/fonts/maccos/MACCOS_BOLD_Demo.otf") format("opentype");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "maccos";
+    src: url("/src/static/fonts/maccos/MACCOS_LIGHT_Demo.otf")
+        format("opentype");
+    font-weight: light;
+}
+@font-face {
+    font-family: "maccos";
+    src: url("/src/static/fonts/maccos/MACCOS_REGULAR_Demo.otf")
+        format("opentype");
+    font-weight: regular;
+}
+
+$fs-24: 1.5rem;
+$fs-20: 1.25rem;
+$fs-18: 1.125rem;
+$fs-16: 1rem;
+$fs-15: 0.9375rem;
+$fs-14: 0.875rem;
+$fs-13: 0.8125rem;
