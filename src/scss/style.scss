@@ -1,5 +1,8 @@
 @use "./utilities" as *;
 @use "./components" as *;
+@use "./contacts.scss";
+@use "./home.scss";
+@use "./menu.scss";
 
 #content {
     min-height: 100vh;

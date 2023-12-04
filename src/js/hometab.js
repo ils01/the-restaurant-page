@@ -1,5 +1,4 @@
 import { createHTMLElement } from "./createElt";
-import "/src/scss/home.scss";
 import barImg from "/src/static/img/home/pub.jpg";
 import burgerImg from "/src/static/img/home/burgers.jpeg";
 import beerImg from "/src/static/img/home/beer.jpg";

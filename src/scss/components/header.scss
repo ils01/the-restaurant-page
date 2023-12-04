@@ -1,9 +1,11 @@
 @use "../utilities/" as *;
 
 $t: 24px;
-
+$h: 33px;
+$w: 31px;
+$l: 20px;
 header {
-    z-index: 2;
+    z-index: 4;
     position: fixed;
     width: 100%;
     background-color: $crow-black-light;
@@ -12,38 +14,38 @@ header {
     gap: 1rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid $ash-gray;
-}
 
-.navbar {
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-
-    & > .logo {
-        margin-top: $t;
-        & > img {
-            width: 32px;
-            height: 32px;
-        }
-    }
-
-    & > .header__right {
-        margin-top: $t;
-        margin-right: 1.25rem;
+    .navbar {
+        flex: 1;
         display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 1rem;
+        justify-content: space-between;
+        gap: 2rem;
 
-        & > * {
-            width: max-content;
+        & > .logo {
+            margin-top: $t;
+            & > img {
+                width: 32px;
+                height: 32px;
+            }
         }
-        & > .status {
-            font-size: $fs-14;
+
+        & > .header__right {
+            margin-top: $t;
+            margin-right: 1.25rem;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
+            gap: 1rem;
+
+            & > * {
+                width: max-content;
+            }
+            & > .status {
+                font-size: $fs-14;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            }
         }
     }
 }
@@ -54,11 +56,10 @@ header {
     height: 64px;
     width: 64px;
 
-    $h: 33px;
-    $w: 31px;
-    $l: 20px;
-
     input[type="checkbox"] {
+        &:hover {
+            cursor: pointer;
+        }
         display: block;
         position: absolute;
         height: $h;
@@ -126,6 +127,12 @@ header {
             background-color: transparent;
             color: inherit;
             border: none;
+
+            &:hover {
+                cursor: pointer;
+                border-bottom: 1px solid $ash-gray;
+                margin-bottom: -1px;
+            }
         }
     }
 }
@@ -141,4 +148,25 @@ header {
 }
 .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
     transform: rotate(-35deg);
+}
+
+@media (min-width: 1000px) {
+    .navbar {
+        padding-inline: 2rem;
+
+        .menu-items {
+            transform: translateX(calc(-100% - 2rem));
+            padding-top: 100px;
+        }
+    }
+
+    .navbar-container input[type="checkbox"] {
+        line-height: normal;
+        width: 38px;
+        height: 38px;
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+        transform: translateX(-2rem);
+    }
 }

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 @font-face {
     font-family: "disco";
     src: url("/src/static/fonts/disco70.otf") format("opentype");
@@ -25,8 +27,6 @@
     font-family: "calli";
     src: url("/src/static/fonts/calli.ttf") format("truetype");
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 $fs-24: 1.5rem;
 $fs-20: 1.25rem;

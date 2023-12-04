@@ -1,5 +1,4 @@
 import { createHTMLElement } from "./createElt";
-import "/src/scss/contacts.scss";
 
 function contacts() {
     const page = document.createElement("div");

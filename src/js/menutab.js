@@ -5,8 +5,6 @@ import dish3 from "/src/static/img/menu/dish3.jpeg";
 import drink1 from "/src/static/img/menu/drink1.jpeg";
 import drink2 from "/src/static/img/menu/drink2.jpeg";
 
-import "/src/scss/menu.scss";
-
 const foods = [
     [
         dish1,
