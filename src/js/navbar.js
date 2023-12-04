@@ -46,9 +46,9 @@ function navbar() {
 
         statusTime.textContent = `${time[0]}:${time[1]}`;
 
-        if (time[0] == 23) {
+        if (time[0] == 22) {
             statusStatus.textContent = "We're closing soon";
-        } else if (time[0] >= 10 && time[0] <= 23) {
+        } else if (time[0] >= 10 && time[0] <= 22) {
             statusStatus.textContent = "We're open";
         } else {
             statusStatus.textContent = "We're closed";
