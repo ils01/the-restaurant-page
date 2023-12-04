@@ -3,6 +3,7 @@
 $t: 24px;
 
 header {
+    z-index: 2;
     position: fixed;
     width: 100%;
     background-color: $crow-black-light;

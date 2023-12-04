@@ -4,6 +4,9 @@
     border-top: 1px solid $ash-gray;
     background-color: $crow-black-light;
     padding: 4rem 2rem 4rem;
+    font-family: "Roboto";
+    font-size: 0.875em;
+    letter-spacing: 0.04rem;
 
     display: flex;
     justify-content: center;
@@ -13,7 +16,7 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        gap: 4rem;
+        gap: 6rem;
         row-gap: 5rem;
 
         & > .footer__list {
@@ -29,7 +32,7 @@
             }
             .list-title {
                 color: $pearl-white;
-                font-size: $fs-18;
+                font-size: 1.15em;
                 font-weight: 600;
                 margin-bottom: 0.5rem;
             }
